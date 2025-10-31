@@ -1,0 +1,1 @@
+﻿SELECT LA.AppID,E.EmpID, E.[Name] AS EmployeeName, LT.TypeName AS LeaveType, LA.[Start], LA.[End], LA.AppliedDate FROM LeaveApply LA inner join Employee E ON LA.EmpID = E.EmpID inner join LeaveType LT ON LA.TypeID = LT.TypeID WHERE LA.[Status] = 'Pending';
